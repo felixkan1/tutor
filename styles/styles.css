@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+/* Header */
+
+#header{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+
+.container{
+  min-height: 100vh;
+  min-width: 100%;
+}
+
+div.navbar .nav-list{
+  position:fixed;
+  width:250px;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.541);
+  left:-250px;
+  top:0px;
+  transition: left 0.5s ease;    
+}
+
+div.navbar .logo{
+  width: 200px;
+  height: 100px;
+  cursor: pointer;
+}
+
+
+div.navbar .nav-list.active{
+  left:0;
+  top:0px
+}
+
+div.navbar .hamburger{
+  width: 50px;
+  height: 50px;
+  margin: 5px 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  z-index: 999;
+
+}
+
+div.navbar .hamburger .bar{
+  width:30px;
+  height:2px;
+  background-color: black;
+  position: relative;
+}
+
+div.navbar .hamburger .bar::after,
+div.navbar .hamburger .bar::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: black;
+  transition: 0.3s ease;
+  transition-property: all;
+}
+
+div.navbar .hamburger .bar::after{
+  top:8px;
+}
+
+div.navbar .hamburger .bar::before{
+  bottom:8px;
+}
+
+div.navbar .hamburger .bar.active::after{
+  top:0px;
+}
+
+div.navbar .hamburger .bar.active::before{
+  bottom:0px;
+}
+
+
+div.nav-list ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+div.nav-list li{
+  color:white;
+  list-style: none;
+  padding:15px 10px;
+  text-decoration: none;
+
+}
+
+div.nav-list li a:hover{
+  color: rgb(19,216,126);
+  list-style: none;
+  text-decoration: none;
+
+}
+
+div.nav-list li a{
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+
+div.nav-list .contact{
+
+  position: absolute;
+  top: 60%;
+  left:5%
+}
+
+div.nav-list .contact a{
+  text-decoration: none;
+  color: black;
+}
+
+/* End of header */
+
+
+/* Main section */
+
+#main{
+  background-image: url(../images/student3.jpeg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  
+}
+/* Add black overlay */
+#main::after{
+  content:'';
+  position: absolute; /* relative to ancestor */
+  left:0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: .6;
+  z-index: -1;
+
+}
+.main{
+  height: 100vh;
+  width: 100vw;
+}
+
+.main h1{
+  text-align: center;
+  padding-top: 100px;
+}
+
+.main h1 span{
+  color:rgb(19,216,126);
+}
+
+.main h2{
+  padding-top: 10px;
+  text-align: center;
+}
+
+.main p{
+  text-align: center;
+  padding: 10px;
+}
+
+/* End Main */
+
+/* About */
+div.about{
+ height:100%;
+ width: 100%;
+ margin: 0 auto;
+}
+
+#about .about-top{
+  width:500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#about .about-top h1{
+  color: rgb(19,216,126);
+  margin:5px auto;
+}
+
+#about .about-top p{
+  margin: 5px auto;
+}
+
+#about .about-bottom{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#about .about-bottom .about-item{
+  flex:1 1 500px;
+  margin:10px 20px;
+  height: 300px;
+  border-radius: 20px;
+  text-align: center;
+  background-color:  rgb(19,216,126);
+  overflow: hidden;
+}
+#about .about-bottom .about-item div.image1{
+  width: 100%;
+  height: 75%;
+  border:none;
+  margin:auto auto;
+  margin-top: 20px;
+  background-image: url(../images/grade1-8.jpeg);
+  background-size:cover;
+
+}
+#about .about-bottom .about-item div.image2{
+  width: 100%;
+  height: 75%;
+  border:none;
+  margin:auto auto;
+  margin-top: 20px;
+  background-image: url(../images/hs.jpeg);
+  background-size:cover;
+}
+
+
+
+/* End of About */
+/* Tablet */
+
+@media only screen and (min-width:768px){ 
+  /* Main */
+  .main{
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .main h1{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+  }
+  
+  .main h1 span{
+    color:rgb(19,216,126);
+  }
+  
+  .main h2{
+    padding-top: 10px;
+    text-align: center;
+  }
+  
+  .main p{
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* End main */
+
+  /* About */
+  div.about{
+    height:100%;
+    width: 100%;
+    margin: 0 auto;
+   }
+   
+   #about .about-top{
+     width:700px;
+     margin: 0 auto;
+     text-align: center;
+   }
+   
+   #about .about-top h1{
+     color: rgb(19,216,126);
+     margin:5px auto;
+     font-size: 50px;
+   }
+   
+   #about .about-top p{
+     margin: 5px auto;
+     font-size: 20px;
+   }
+   
+   #about .about-bottom{
+     display: flex;
+     flex-wrap: wrap;
+     flex-direction: row;
+   }
+   
+   #about .about-bottom .about-item{
+     flex:1 1 500px;
+     margin:10px 20px;
+     height: 550px;
+     border-radius: 20px;
+     text-align: center;
+     background-color:  rgb(19,216,126);
+     overflow: hidden;
+   }
+
+   #about .about-bottom .about-item h2{
+      margin: 10px auto;
+   }
+
+
+   #about .about-bottom .about-item div.image1{
+    width: 100%;
+    height: 100%;
+    border:none;
+    margin:auto auto;
+    margin-top: 20px;
+    background-image: url(../images/grade1-8.jpeg);
+    background-size:cover;
+
+  }
+  #about .about-bottom .about-item div.image2{
+    width: 100%;
+    height: 100%;
+    border:none;
+    margin:auto auto;
+    margin-top: 20px;
+    background-image: url(../images/hs.jpeg);
+    background-size:cover;
+  }
+
+   /* End of about */
+
+   
+
+}
+
+/* Laptop */
+
+@media only screen and (min-width: 1200px){
+  /* Header */
+  
+  div.navbar .hamburger{
+    display: none;
+  }
+  
+  div.navbar .logo{
+   
+    position: absolute;
+    left:20px;
+  }
+  div.navbar .logo img{
+    position: absolute;
+    top:-50px;
+  }
+
+  div.navbar .nav-list{
+    position:initial;
+    width:100%;
+    height: 90px;
+    background-color: rgba(128, 128, 128, 0.363);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.nav-list ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+  
+  div.nav-list li{
+    color:white;
+    list-style: none;
+    text-decoration: none;
+    margin-left: 100px;
+  }
+  
+  div.nav-list li a:hover{
+    color: rgb(19,216,126);
+    list-style: none;
+    text-decoration: none;
+  
+  }
+  
+  div.nav-list li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease;
+  }
+
+  div.nav-list .contact{
+    position: absolute;
+    top:8%;
+    left:17%;
+    font-weight: bold;
+  }
+  
+  div.nav-list .contact a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+  }
+
+  /* End of header */
+
+  /* Main section */
+
+  .main{
+    height: 100vh;
+  }
+  
+  .main h1{
+    text-align: left;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    padding-top: 100px;
+    margin-left: 10px;
+  }
+
+  .main h2{
+    text-align: left;
+    font-size: 2rem;
+    margin-left: 15px;
+    margin-bottom: 10px;
+  }
+  
+
+  .main p{
+    font-size: 1.5rem;
+    width: 40%;
+    margin-left: 10px;
+    padding: 10px;
+    text-align: left;
+  }
+
+  h1 span{
+    color:rgb(19,216,126);
+  }
+
+  /* End of main section */
+
+  /* About section */
+
+  #about .about-top{
+    width: 100%;
+  }
+
+  #about .about-top{
+    width: 70%;
+  }
+
+
+  #about .about-top h2{
+    margin: 5px auto;
+    font-size: 40px;
+    border: 1px solid black;
+  }
+  
+
+  #about .about-bottom .about-item{
+    height:500px;
+  }
+  
+  #about .about-bottom .about-item h2{
+    margin-bottom: 20px;
+  }
+
+  #about .about-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  #about .about-bottom .about-item{
+    flex:1 1 500px;
+    margin:10px 20px;
+    height: 550px;
+    border-radius: 10px;
+    text-align: center;
+    background-color:  rgb(19,216,126);
+    overflow: hidden;
+    border: none;
+  }
+  #about .about-bottom .about-item p{
+    padding-left: 10px;
+  }
+  
+  #about .about-bottom .about-item div.image1{
+    width: 100%;
+    height: 100%;
+    border:none;
+    margin:auto auto;
+    margin-top: 20px;
+    background-image: url(../images/grade1-8.jpeg);
+    background-size:cover;
+
+  }
+  #about .about-bottom .about-item div.image2{
+    width: 100%;
+    height: 100%;
+    border:none;
+    margin:auto auto;
+    margin-top: 20px;
+    background-image: url(../images/hs.jpeg);
+    background-size:cover;
+  }
+
+}

@@ -10,17 +10,8 @@
 
 /* Header */
 
-#main{
-  background-image: url(./images/student3.jpeg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  position: absolute;
-  top:0;
-  left: 0;
-  z-index: -1;
-  
-}
+/* Header */
+
 
 div.navbar .nav-list{
   position:fixed;
@@ -139,34 +130,9 @@ div.nav-list .contact a{
   color: black;
 }
 
-/* End of header */
+/* End Header */
 
 
-/* Main section */
-.main{
-  height: 100vh;
-  width: 100vw;
-}
-
-.main h1{
-  text-align: center;
-  padding-top: 100px;
-}
-
-.main h2{
-  padding-top: 10px;
-  text-align: center;
-}
-
-
-.main p{
-  text-align: center;
-  padding-top: 10px;
-}
-
-
-
-/* Laptop */
 
 @media only screen and (min-width: 1200px){
   /* Header */
@@ -237,38 +203,5 @@ div.nav-list .contact a{
 
   /* End of header */
 
-  /* Main section */
-
-  .main{
-    height: 100vh;
-  }
-  
-  .main h1{
-    text-align: left;
-    font-size: 4rem;
-    margin-bottom: 20px;
-    padding-top: 100px;
-    margin-left: 10px;
-  }
-
-  .main h2{
-    text-align: left;
-    font-size: 2rem;
-    margin-left: 15px;
-    margin-bottom: 10px;
-  }
-  
-
-  .main p{
-    font-size: 1.5rem;
-    width: 40%;
-    margin-left: 10px;
-    padding: 10px;
-    text-align: left;
-  }
-
-  h1 span{
-    color:rgb(19,216,126);
-  }
 
 }
