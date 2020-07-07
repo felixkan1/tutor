@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -18,7 +18,7 @@
 
 .container{
   min-height: 100vh;
-  min-width: 100%;
+  max-width: 100vw;
 }
 
 div.navbar .nav-list{
@@ -165,8 +165,8 @@ div.nav-list .contact a{
 
 }
 .main{
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 .main h1{
@@ -209,7 +209,7 @@ div.about{
 }
 
 #about .about-top p{
-  margin: 5px auto;
+  padding: 5px;
 }
 
 #about .about-bottom{
@@ -219,8 +219,8 @@ div.about{
 }
 
 #about .about-bottom .about-item{
-  flex:1 1 500px;
-  margin:10px 20px;
+  flex:0 1 500px;
+  margin:10px auto;
   height: 300px;
   border-radius: 20px;
   text-align: center;
@@ -256,8 +256,10 @@ div.about{
   /* Main */
   .main{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
+
+  
   
   .main h1{
     text-align: center;
@@ -375,10 +377,11 @@ div.about{
     position:initial;
     width:100%;
     height: 90px;
-    background-color: rgba(128, 128, 128, 0.363);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.5s ease;
   }
 
   div.nav-list ul{
@@ -427,6 +430,7 @@ div.about{
 
   .main{
     height: 100vh;
+    width: 100%;
   }
   
   .main h1{
@@ -461,7 +465,12 @@ div.about{
 
   /* About section */
 
+  #about{
+    padding-top: 100px;
+  }
+
   #about .about-top{
+    margin:0 auto;
     width: 100%;
   }
 
@@ -477,10 +486,7 @@ div.about{
   }
   
 
-  #about .about-bottom .about-item{
-    height:500px;
-  }
-  
+
   #about .about-bottom .about-item h2{
     margin-bottom: 20px;
   }
@@ -494,7 +500,7 @@ div.about{
   #about .about-bottom .about-item{
     flex:1 1 500px;
     margin:10px 20px;
-    height: 550px;
+    height: 500px;
     border-radius: 10px;
     text-align: center;
     background-color:  rgb(19,216,126);
@@ -503,6 +509,11 @@ div.about{
   }
   #about .about-bottom .about-item p{
     padding-left: 10px;
+  }
+
+  #about .about-bottom .about-item h2{
+    font-size: 3
+    0px;
   }
   
   #about .about-bottom .about-item div.image1{
