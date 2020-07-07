@@ -8,6 +8,8 @@
   
 }
 
+/* Header */
+
 #main{
   background-image: url(./images/student3.jpeg);
   background-repeat: no-repeat;
@@ -118,16 +120,27 @@ div.nav-list li a:hover{
 }
 
 div.nav-list li a{
-  font-size: 20px;
+  font-size: 30px;
   text-decoration: none;
   color: white;
   transition: all 0.5s ease;
 }
 
-.header .contact{
-  color: white;
-  margin: 100%;
+
+div.nav-list .contact{
+
+  position: absolute;
+  top: 50%;
+  left:5%
 }
+
+div.nav-list .contact a{
+  text-decoration: none;
+  color: black;
+}
+
+/* End of header */
+
 
 /* Main section */
 .main{
@@ -150,6 +163,8 @@ div.nav-list li a{
 /* Laptop */
 
 @media only screen and (min-width: 1200px){
+  /* Header */
+  
   div.navbar .hamburger{
     display: none;
   }
@@ -200,6 +215,20 @@ div.nav-list li a{
     color: white;
     transition: all 0.5s ease;
   }
+
+  div.nav-list .contact{
+
+    position: absolute;
+    top: 50%;
+    left:5%
+  }
+  
+  div.nav-list .contact a{
+    text-decoration: none;
+    color: black;
+  }
+
+  /* End of header */
 
   /* Main section */
 
