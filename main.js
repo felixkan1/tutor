@@ -32,17 +32,10 @@ document.addEventListener('scroll', () => {
   
 });
 
-if(window.innerWidth < 1200){
-  document.querySelector(".nav-list").style.backgroundColor = '#4f4a4a';
-}
-
-var docWidth = document.documentElement.offsetWidth;
-
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
+window.addEventListener("resize",()=>{
+  if(window.innerWidth < 1200){
+    document.querySelector(".nav-list").style.backgroundColor = '#4f4a4a';
   }
-);
+
+})
+
