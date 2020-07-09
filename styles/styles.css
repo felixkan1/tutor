@@ -210,9 +210,8 @@ div.about{
 }
 
 #about .about-top p{
-  width:500px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 
 #about .about-top h1{
@@ -750,13 +749,17 @@ div.about{
   }
 
 
+
+
   #about .about-top h2{
     margin: 5px auto;
     font-size: 40px;
     border: 1px solid black;
   }
   
-
+  #about .about-top p{
+    text-align: left;
+  }
 
   #about .about-bottom .about-item h2{
     margin-bottom: 20px;
