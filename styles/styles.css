@@ -25,7 +25,7 @@ div.navbar .nav-list{
   position:fixed;
   width:250px;
   height: 100vh;
-  background-color: rgba(128, 128, 128, 0.541);
+  background-color: #4f4a4a;
   left:-250px;
   top:0px;
   transition: left 0.5s ease;    
@@ -149,7 +149,15 @@ div.nav-list .contact a{
   background-size: cover;
   position: relative;
   z-index: 1;
-  
+  height: 100vh;
+}
+
+
+#main img{
+  height: 250px;
+  width: 400px;
+  margin-left: 45px;
+  margin-top: 160px;
 }
 /* Add black overlay */
 #main::after{
@@ -197,7 +205,11 @@ div.about{
  margin: 0 auto;
 }
 
-#about .about-top{
+#about .about-top h1{
+  text-align: center;
+}
+
+#about .about-top p{
   width:500px;
   margin: 0 auto;
   text-align: left;
@@ -270,6 +282,10 @@ div.about{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+}
+
+.testimonials .testimonials-bottom h2{
+  color:white;
 }
 
 .testimonials .testimonials-bottom .testimonial-item{
@@ -394,6 +410,13 @@ div.about{
   .main p{
     text-align: center;
     padding: 10px;
+  }
+
+  #main img{
+    height: 280px;
+    width: 380px;
+    margin-left: 10px;
+    margin-top: 100px;
   }
 
   /* End main */
@@ -668,11 +691,26 @@ div.about{
   
   .main h1{
     text-align: left;
-    font-size: 4rem;
+    font-size: 4.4rem;
     margin-bottom: 20px;
     padding-top: 100px;
     margin-left: 10px;
   }
+
+  #main img{
+    height: 350px;
+    width: 540px;
+    position: absolute;
+    top:290px;
+    left:10px;
+  }
+
+  /* #main img{
+    height: 280px;
+    width: 380px;
+    margin-left: 10px;
+    margin-top: 100px;
+  } */
 
   .main h2{
     text-align: left;
