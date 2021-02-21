@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+  letter-spacing: 0.5px;
 }
 
 /* Header */
@@ -25,7 +26,7 @@ div.navbar .nav-list{
   position:fixed;
   width:250px;
   height: 100vh;
-  background-color: #4f4a4a;
+  background-color: #3a3a3a;
   left:-250px;
   top:0px;
   transition: left 0.5s ease;    
@@ -37,7 +38,14 @@ div.navbar .logo{
   cursor: pointer;
 }
 
-
+div.navbar .logo img{
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top:60px;
+  left: 20px;
+  z-index: 99999;
+}
 
 
 div.navbar .nav-list.active{
@@ -109,7 +117,7 @@ div.nav-list li{
   list-style: none;
   padding:15px 10px;
   text-decoration: none;
-
+  text-align: center;
 }
 
 div.nav-list li a:hover{
@@ -120,7 +128,7 @@ div.nav-list li a:hover{
 }
 
 div.nav-list li a{
-  font-size: 30px;
+  font-size: 20px;
   text-decoration: none;
   color: white;
   transition: all 0.5s ease;
@@ -145,7 +153,7 @@ div.nav-list .contact a{
 /* Main section */
 
 #main{
-  background-image: url(../images/student3.jpeg);
+  background-image: url(../images/headerPic.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -160,6 +168,7 @@ div.nav-list .contact a{
   width: 400px;
   margin-left: 45px;
   margin-top: 160px;
+  filter: saturate(400%);
 }
 /* Add black overlay */
 #main::after{
@@ -169,14 +178,13 @@ div.nav-list .contact a{
   top:0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: .6;
   z-index: -1;
 
 }
 .main{
   height: 100%;
   width: 100%;
+  color: white;
 }
 
 .main h1{
@@ -184,16 +192,16 @@ div.nav-list .contact a{
   padding-top: 100px;
 }
 
-.main h1 span{
-  color:rgb(19,216,126);
-}
-
 .main h2{
+  margin-top:20px;
+  font-size: 3rem;
   padding-top: 10px;
   text-align: center;
 }
 
 .main p{
+  margin-top:20px;
+  font-size: 2rem;
   text-align: center;
   padding: 10px;
 }
@@ -201,139 +209,123 @@ div.nav-list .contact a{
 /* End Main */
 
 /* About */
+
+#about{
+  color: #3a3a3a;
+  min-height: 100vh;
+}
 div.about{
  height:100%;
  width: 100%;
  margin: 0 auto;
+ color: #3a3a3a;
 }
 
 #about .about-top h1{
   text-align: center;
+  margin-top: 50px;
+
 }
 
 #about .about-top p{
-  margin: 0 auto;
+  margin: 40px auto;
   text-align: center;
-}
-
-#about .about-top h1{
-  color: rgb(19,216,126);
-  margin:5px auto;
 }
 
 #about .about-top p{
   padding: 5px;
 }
 
-#about .about-bottom{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+#about .session{
+  width: 90%;
+  margin-left: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 25px rgb(122, 122, 122);
 }
 
-#about .about-bottom .about-item{
-  flex:0 1 450px;
-  margin:10px auto;
-  height: 300px;
-  border-radius: 20px;
-  text-align: center;
-  background-color:  rgb(19,216,126);
-  overflow: hidden;
+#about i{
+  font-size: 0.7rem;
+  margin-left: 110px;
 }
-
-#about .about-bottom .about-item h2{
-  color: white;
-}
-#about .about-bottom .about-item div.image1{
-  width: 100%;
-  height: 75%;
-  border:none;
-  margin:auto auto;
-  margin-top: 20px;
-  background-image: url(../images/grade1-8.jpeg);
-  background-size:cover;
-
-}
-#about .about-bottom .about-item div.image2{
-  width: 100%;
-  height: 75%;
-  border:none;
-  margin:auto auto;
-  margin-top: 20px;
-  background-image: url(../images/hs.jpeg);
-  background-size:cover;
-}
-
-
 
 /* End of About */
 
-/* Testimonials */
-.testimonials .testimonials-top{
+/* Services */
+.services h1{
+  color: black;
+  text-align: center;
+  max-height: 100vh;
+}
+
+.services .service-items{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
   margin: 0 auto;
-  text-align: center;
 }
 
-.testimonials .testimonials-top h1{
-  color: rgb(19,216,126);
+.services .service-items .item{
+  width: 95%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 30px auto;
+  box-shadow: 0px 0px 25px rgb(122, 122, 122);
 }
 
-
-
-.testimonials .testimonials-bottom h2{
-  color:white;
-}
-
-.testimonials .testimonials-bottom .testimonial-item{
-  margin:0px auto;
-  height: 300px;
-  text-align: center;
-  background-color:  rgb(19,216,126);
-}
-
-.testimonials .testimonials-bottom .testimonial-item .feedback{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.services .service-items .item img{
   width: 100%;
-  height: 140px;
+  height: 100%;
 }
 
-
-.testimonials .testimonials-bottom .testimonial-item:nth-child(2){
-  background-color: grey;
+.services .service-items .item h2{
+  text-align: center;
 }
 
-.testimonials .testimonials-bottom .testimonial-item ul{
-  padding-top: 20px;
-  text-align: left;
-  list-style: none;
+.services .service-items .item p{
+  padding: 20px;
+  font-size: 1.5rem;
 }
 
-.testimonials .testimonials-bottom .testimonial-item ul li{
-  padding-top: 10px;
-  padding-left: 15px;
+/* End of Services */
+
+/* Testimonials */
+.testimonials h1{
+  color: #3a3a3a;
+  text-align: center;
 }
 
-.testimonials .testimonials-bottom .feedback{
+.testimonials .reviews{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.testimonials .testimonials-bottom .feedback div{
-  margin: 5px;
+.testimonials .reviews .review{
+  width: 85%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 30px auto;
+  box-shadow: 0px 0px 25px rgb(122, 122, 122);
+  padding: 15px;
 }
 
-.testimonials .testimonials-bottom .feedback div img{
-  width: 200px;
-  height: 100px;
-  object-fit: contain;
+.testimonials .reviews .review .close{
+  float: right;
 }
+
+.testimonials .reviews .review .name{
+  margin-top: 50px;
+}
+
+
+
 
 /* End of Testimonials */
 
 /* Contact */
-.contact h1{
+/* .contact h1{
   margin: 0 auto;
   text-align: center;
 }
@@ -380,11 +372,96 @@ div.about{
 
 .contact form .button button{
   padding: 5px;
+} */
+
+/* End of Contact */
+
+/* Accomplishments */
+#accomplishments{
+  height: 80vh;
+  background-image: url(../images/writing.jpg);
+  background-size:cover;
+}
+
+
+#accomplishments h1{
+  color: black;
+  text-align: center;
+  padding:10px;
+}
+
+#accomplishments h1.date{
+  color: rgb(19,216,126);
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#accomplishments .list{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  
+}
+
+#accomplishments .list li{
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 20px;
+  list-style:none;
+  vertical-align: text-top;
+}
+
+#accomplishments .list li:before{
+  content: '';
+  display: inline-block;
+  height: 40px;
+  background-size: 20px;
+  background-repeat: no-repeat;  
+  width: 30px;
+  background-image: url(../images/medal.png);
+  transform: translateY(50%);
+}
+
+/* End of Accomplishments */
+
+
+
+/* Footer */
+#footer{
+  height: 20vh;
+  background-color: #3a3a3a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+#footer .contact{
+  margin-bottom: 30px;
+}
+
+#footer .contact img{
+  transform: translateY(25%);
+}
+
+#footer .contact a{
+  text-decoration: none;
+  color: white;
+  padding-left: 10px;
+}
+
+#footer .line{
+  border: 1px solid white;
+  height: 1px;
+  width: 40%;
+  margin-bottom: 30px;
 }
 
 
 
-/* End of Contact */
+
+
 /* Tablet */
 
 @media only screen and (min-width:768px){ 
@@ -413,7 +490,6 @@ div.about{
   
   .main p{
     text-align: center;
-    padding: 10px;
   }
 
   #main img{
@@ -439,7 +515,7 @@ div.about{
    }
    
    #about .about-top h1{
-     color: rgb(19,216,126);
+     color:#3a3a3a;
      margin:5px auto;
      font-size: 50px;
    }
@@ -491,67 +567,87 @@ div.about{
     background-size:cover;
   }
 
+  #about i{
+    font-size: 1.1rem;
+    margin-left: 100px;
+  }
+
    /* End of about */
 
-   /* Testimonials */
-   .testimonials .testimonials-top{
-    color: rgb(19,216,126);
-    margin:5px auto;
-    font-size: 40px;
-  }
-  
-  .testimonials .testimonials-top h1{
-    color: rgb(19,216,126);
-  }
-  
-  
-  .testimonials .testimonials-bottom{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  
-  .testimonials .testimonials-bottom .testimonial-item{
-    flex:0 1 100%;
-    margin:0px 20px;
-    height: 550px;
-    border-radius: 0px;
+   /* Services */
+
+   .services h1{
+    color: black;
     text-align: center;
-    background-color:  rgb(19,216,126);
-    overflow: hidden;
+    max-height: 100vh;
+    font-size: 50px;
   }
   
-  .testimonials .testimonials-bottom .testimonial-item li{
-    margin-top: 20px;
-    font-size: 30px;
+  .services .service-items{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .services .service-items .item{
+    height: 400px;
+    width: 70%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px 10px;
+    box-shadow: 0px 0px 25px rgb(122, 122, 122);
+  }
+  
+  .services .service-items .item img{
+    width: 100%;
+    height: 50%;
+  }
+  
+  .services .service-items .item h2{
+    text-align: center;
+  
+  }
+  
+  .services .service-items .item p{
+    padding: 20px;
+    font-size: 1.5rem;
   }
 
-  
-  .testimonials .testimonials-bottom .testimonial-item ul{
-    padding-top: 20px;
-    text-align: left;
-    list-style: none;
+  /* End of Services */
+
+   /* Testimonials */
+   .testimonials h1{
+    color: #3a3a3a;
+    text-align: center;
+    font-size: 50px;
   }
   
-  
-  
-  .testimonials .testimonials-bottom .feedback{
+  .testimonials .reviews{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
   
-  .testimonials .testimonials-bottom .feedback div{
-  
-    margin: 10px;
+  .testimonials .reviews .review{
+    width: 85%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px auto;
+    box-shadow: 0px 0px 25px rgb(122, 122, 122);
+    padding: 15px;
   }
   
-  .testimonials .testimonials-bottom .feedback div img{
-    width: 350px;
-    object-fit: contain;
+  .testimonials .reviews .review .close{
+    float: right;
   }
-  .testimonials .testimonials-bottom .testimonial-item h2{
-    font-size:30px;
+  
+  .testimonials .reviews .review .name{
+    margin-top: 50px;
   }
+  
    /* End of testimonials */
 
 
@@ -624,13 +720,19 @@ div.about{
   }
   
   div.navbar .logo{
-   
     position: absolute;
     left:20px;
+    top:25px;
+    width: 150px;
+    height:60px;
   }
+
   div.navbar .logo img{
     position: absolute;
-    top:-50px;
+    top:0px;
+    left: 70px;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   div.navbar .nav-list{
@@ -646,15 +748,21 @@ div.about{
 
   div.nav-list ul{
     display: flex;
+    width: 600px;
     flex-direction: row;
     margin-top: 0;
+    justify-content: space-between;
+    position: absolute;
+    left: 800px;
+    font-weight: 230;
+    top:40px;
   }
   
   div.nav-list li{
     color:white;
     list-style: none;
     text-decoration: none;
-    margin-left: 100px;
+  
   }
   
   div.nav-list li a:hover{
@@ -665,23 +773,27 @@ div.about{
   }
   
   div.nav-list li a{
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
     color: white;
     transition: all 0.5s ease;
   }
 
   div.nav-list .contact{
+    color: white;
     position: absolute;
-    top:8%;
-    left:17%;
-    font-weight: bold;
+    top:52px;
+    left:20%;
+    font-weight: lighter;
+    
   }
   
   div.nav-list .contact a{
+    position: absolute;
+    margin-left: 10px;
     text-decoration: none;
-    color: black;
-    font-size: 15px;
+    color: white;
+    font-size: 1.5rem;
   }
 
   /* End of header */
@@ -691,14 +803,39 @@ div.about{
   .main{
     height: 100vh;
     width: 100%;
+    position: relative;
   }
+
+  .main .text{
+    position: absolute;
+    left: 130px;
+    top: 200px;
+    color: white;
+  } 
   
   .main h1{
     text-align: left;
     font-size: 4.4rem;
     margin-bottom: 20px;
     padding-top: 100px;
-    margin-left: 10px;
+    width: 450px;
+    font-size: 3rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    
+  }
+  .main h2{
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 300;
+    text-align: left;
+  }
+
+  .main p{
+    font-size: 1.5rem;
+    width: 60%;
+    text-align: left;
+    font-weight: 200;
   }
 
   #main img{
@@ -708,29 +845,8 @@ div.about{
     top:290px;
     left:10px;
   }
-
-  /* #main img{
-    height: 280px;
-    width: 380px;
-    margin-left: 10px;
-    margin-top: 100px;
-  } */
-
-  .main h2{
-    text-align: left;
-    font-size: 2rem;
-    margin-left: 15px;
-    margin-bottom: 10px;
-  }
   
 
-  .main p{
-    font-size: 1.5rem;
-    width: 40%;
-    margin-left: 10px;
-    padding: 10px;
-    text-align: left;
-  }
 
   h1 span{
     color:rgb(19,216,126);
@@ -740,9 +856,12 @@ div.about{
 
   /* About section */
 
-  #about{
+
+  div.about{
     padding-top: 100px;
+    min-height: 50vh;
   }
+
 
   #about .about-top{
     margin:0 auto;
@@ -754,118 +873,128 @@ div.about{
   }
 
 
-
-
-  #about .about-top h2{
-    margin: 5px auto;
-    font-size: 40px;
-    border: 1px solid black;
+  #about .session{
+    width: 90%;
+    margin-left: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 25px rgb(122, 122, 122);
   }
-  
+
+
   #about .about-top p{
     text-align: left;
   }
 
-  #about .about-bottom .about-item h2{
-    margin-bottom: 20px;
-    color: white;
+  #about i{
+    font-size: 1.2rem;
+    margin-left: 190px;
   }
 
-  #about .about-bottom{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+  /* End of About */
+
+  /* Services */
+
+ 
+  #services{
+
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(90deg, rgba(0,210,217,1) 10%, rgba(21,216,126,1) 90%);
   }
-  
-  #about .about-bottom .about-item{
-    flex:1 1 500px;
-    margin:10px 20px;
-    height: 500px;
-    border-radius: 10px;
+
+  .services h1{
+    padding-top: 100px;
     text-align: center;
-    background-color:  rgb(19,216,126);
-    overflow: hidden;
-    border: none;
-  }
-  #about .about-bottom .about-item p{
-    padding-left: 10px;
-  }
+    font-size: 50px;
+    color: white;
+    position: absolute;
+    top: 90px;
+    margin:0 auto;
+    width: 100%;
 
-  #about .about-bottom .about-item h2{
-    font-size: 3
-    0px;
   }
   
-  #about .about-bottom .about-item div.image1{
-    width: 100%;
+  .services .service-items{
+    display: flex;
+    flex-direction: row;
     height: 100%;
-    border:none;
-    margin:auto auto;
-    margin-top: 20px;
-    background-image: url(../images/grade1-8.jpeg);
-    background-size:cover;
+    width: 100%;
+    margin: 70px auto;
+    justify-content: center;
+    position: absolute;
+    top: 230px;
+  }
+  
+  .services .service-items .item{
+    height: 450px;
+    width: 35%;
+    margin: 50px 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 25px rgb(122, 122, 122);
+    color: #3a3a33;
+    background-color: white;
+    line-height: 2rem;
+  }
+  
+  .services .service-items .item img{
+    width: 100%;
+    height: 50%;
+  }
+  
+  .services .service-items .item h2{
+    margin-top: 30px;
+    text-align: left;
+    padding-left: 40px;
+    font-size: 2rem;
+  
+  }
+  
+  .services .service-items .item p{
+    padding-left: 40px;
+    font-size: 1.5rem;
+  }
 
-  }
-  #about .about-bottom .about-item div.image2{
-    width: 100%;
-    height: 100%;
-    border:none;
-    margin:auto auto;
-    margin-top: 20px;
-    background-image: url(../images/hs.jpeg);
-    background-size:cover;
-  }
+  /* End of Services */
+  
+ 
 
   /* Testimonials */
 
-  .testimonials .testimonials-top{
-    margin: 0 auto;
+  .testimonials h1{
+    color: #3a3a3a;
     text-align: center;
+    font-size: 50px;
+    padding-top: 150px;
   }
   
-  .testimonials .testimonials-top h1{
-    color: rgb(19,216,126);
-  }
-  
-  
-  .testimonials .testimonials-bottom{
+  .testimonials .reviews{
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
   }
   
-  .testimonials .testimonials-bottom .testimonial-item{
-    flex:0 1 50%;
-    margin:0px auto;
-    height: 500px;
-    border-radius: 0px;
-    text-align: center;
-    background-color:  rgb(19,216,126);
+  .testimonials .reviews .review{
+    width: 30%;
+    height: 350px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 30px auto;
+    box-shadow: 0px 0px 25px rgb(122, 122, 122);
+    padding: 15px;
   }
   
-  .testimonials .testimonials-bottom .testimonial-item:nth-child(2){
-    background-color: grey;
-  }
-  .testimonials .testimonials-top{
-    color: rgb(19,216,126);
-    margin:5px auto;
-    font-size: 50px;
-    padding-top: 100px;
+  .testimonials .reviews .review .close{
+    float: right;
   }
 
-  .testimonials .testimonials-top h1{
-    font-size: 50px;
+  .testimonials .reviews .review .message{
+    margin: 20px auto;
   }
-
-  .testimonials .testimonials-bottom .testimonial-item li{
-    margin-top: 20px;
-    font-size: 20px;
-  }
-
-  .testimonials .testimonials-bottom .feedback div img{
-    width: 300px;
-    height: 180px;
-    object-fit: contain;
+  
+  .testimonials .reviews .review .name{
+    margin-top: 150px;
   }
   /* End Testimonials */
 
@@ -924,5 +1053,93 @@ div.about{
 
 
   /* End of Contact */
+
+  /* Footer */
+
+  #footer{
+    height: 20vh;
+    background-color: #3a3a3a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  #footer .contact{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+  }
+  
+  #footer .contact img{
+    transform: translateY(25%);
+  }
+  
+  #footer .contact a{
+    text-decoration: none;
+    color: white;
+    padding-left: 10px;
+  }
+  
+  #footer .line{
+    border: 1px solid white;
+    height: 1px;
+    width: 20%;
+    margin-bottom: 30px;
+  }
+
+  /* End of footer */
+
+  /* Accomplishments */
+#accomplishments{
+  padding-top: 120px;
+  height: 80vh;
+  background-image: url(../images/writing.jpg);
+  background-size:cover;
+}
+
+
+#accomplishments h1{
+  color: black;
+  text-align: center;
+  padding:10px;
+  font-size: 50px;
+}
+
+#accomplishments h1.date{
+  color: rgb(19,216,126);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 50px;
+}
+
+#accomplishments .list{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 90px;
+}
+
+#accomplishments .list li{
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 30px;
+  list-style:none;
+  vertical-align: text-top;
+}
+
+#accomplishments .list li:before{
+  content: '';
+  display: inline-block;
+  height: 40px;
+  background-size: 20px;
+  background-repeat: no-repeat;  
+  width: 30px;
+  background-image: url(../images/medal.png);
+  transform: translateY(50%);
+}
+
+/* End of Accomplismnents */
 
 }
